@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./video-component.component.css']
 })
 export class VideoComponentComponent {
-  url_mp4 = "test.mp4"
-  url_ogg = "test.ogg"
+  url_mp4 = "https://archive.org/download/Route_66_-_an_American_badDream/Route_66_-_an_American_badDream.mp4"
+  url_ogg = "https://archive.org/download/Route_66_-_an_American_badDream/Route_66_-_an_American_badDream.ogv"
 }
