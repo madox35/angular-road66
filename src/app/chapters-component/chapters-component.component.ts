@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -9,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
 export class ChaptersComponentComponent implements OnInit {
 
   chapitres: JSON;
+  @Output() onChapitre = new EventEmitter<number>();
+
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
@@ -16,8 +18,8 @@ export class ChaptersComponentComponent implements OnInit {
       this.chapitres = data['Chapters'];
     });
   }
-    onSelect(chapitre){
-      console.log(chapitre);
-    } 
 
+  onSelect(chapitre){
+    this.onChapitre.emit(chapitre.pos);
+  } 
 }
