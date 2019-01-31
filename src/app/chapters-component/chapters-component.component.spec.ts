@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ChaptersComponentComponent } from './chapters-component.component';
+
+import {HttpClientModule} from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'; 
 
 describe('ChaptersComponentComponent', () => {
   let component: ChaptersComponentComponent;
@@ -8,7 +11,8 @@ describe('ChaptersComponentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChaptersComponentComponent ]
+      imports: [HttpClientModule,MatMenuModule,BrowserAnimationsModule],
+      declarations: [ChaptersComponentComponent]
     })
     .compileComponents();
   }));
