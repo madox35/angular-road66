@@ -16,4 +16,8 @@ export class VideoComponentComponent implements OnInit {
   onChapterChange(pos:number){
     this.time = pos;
   } 
+
+  onTimeUpdate(player) {
+    // console.log(player.currentTime)
+  } 
 }
