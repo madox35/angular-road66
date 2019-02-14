@@ -7,12 +7,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { VideoComponentComponent } from './video-component/video-component.component';
 import { ChaptersComponentComponent } from './chapters-component/chapters-component.component';
+import { MapsComponentComponent } from './maps-component/maps-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideoComponentComponent,
-    ChaptersComponentComponent
+    ChaptersComponentComponent,
+    MapsComponentComponent
   ],
   imports: [
     BrowserModule,
