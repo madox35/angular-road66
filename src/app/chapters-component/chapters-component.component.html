@@ -1,0 +1,6 @@
+<button mat-button [matMenuTriggerFor]="chaptersMenu">Chapitres</button>
+<mat-menu #chaptersMenu>
+  <button mat-menu-item *ngFor="let chapitre of chapitres" (click)="onSelect(chapitre)"> 
+    {{ chapitre.title }}
+  </button>
+</mat-menu>

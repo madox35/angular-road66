@@ -1,5 +1,6 @@
-<video controls width="960">
+<video currentTime={{time}} controls width="960" (timeupdate)="onTimeUpdate(player)" #player>
   <source src={{url_mp4}} type="video/mp4">
   <source src={{url_ogg}} type="video/ogg">
   Votre navigateur ne supporte pas la vidéo.
 </video>
+<app-chapters-component (onChapitre)="onChapterChange($event)"></app-chapters-component>
